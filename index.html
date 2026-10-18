@@ -78,6 +78,7 @@
   --bg:#FFFFFF;--ink:#1C1518;--text:#4A4246;--muted:#766C70;--line:#E6DFE0;
   --panel:#F9F5F5;--tint:#F7EFD9;--accent:#5E1A26;--accent-dark:#45111B;--on-accent:#FFFFFF;
   --gold:#FFD54A;--gold-dark:#E6A200;--on-gold:#1C1518;
+  --brand:#5E1A26;
   --gold-grad:linear-gradient(135deg,#FFE27A 0%,#FFD12E 55%,#F5B800 100%);--gold-glow:0 0 14px rgba(255,201,46,.35);
   --card:#FFFFFF;--shadow:0 10px 30px rgba(94,26,38,.12);--red:#B42318;
   --font:'Public Sans','Helvetica Neue',Arial,sans-serif;
@@ -101,8 +102,8 @@ h2{font-size:clamp(28px,3.6vw,38px);font-weight:800;text-wrap:balance}
 p{margin:0 0 20px}
 .lead-p{font-size:21px;line-height:1.5;color:var(--text);max-width:34em}
 .sub{color:var(--text);font-size:19px;max-width:36em;margin:14px 0 0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:10px;background:var(--gold-grad);color:var(--accent);box-shadow:var(--gold-glow);font-weight:800;font-size:18px;text-decoration:none;border:0;cursor:pointer;font-family:var(--font);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;white-space:nowrap}
-.btn:hover{background:var(--gold-grad);color:var(--accent);transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:10px;background:var(--gold-grad);color:var(--brand);box-shadow:var(--gold-glow);font-weight:800;font-size:18px;text-decoration:none;border:0;cursor:pointer;font-family:var(--font);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;white-space:nowrap}
+.btn:hover{background:var(--gold-grad);color:var(--brand);transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);box-shadow:none;font-weight:700}
 .btn.ghost:hover{background:var(--panel);filter:none;box-shadow:none}
 .btn.sm{min-height:44px;padding:0 18px;font-size:16px;border-radius:8px}
@@ -175,12 +176,11 @@ header nav a.lnk{color:var(--text);text-decoration:none;font-size:15px;font-weig
 .journey span{background:var(--panel);border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:700;line-height:1.4;white-space:nowrap}
 .journey i{display:inline-block;width:14px;height:2px;background:var(--accent);position:relative;flex:0 0 auto}
 .journey i::after{content:"";position:absolute;right:-1px;top:-3px;border:4px solid transparent;border-left:5px solid var(--accent)}
-.hero .cta{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:center}
 .hero .cta .trust{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted)}
 .hero .cta .trust span{display:flex;align-items:center;gap:6px}
 .hero .cta .trust svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.hero .cta .btn.xl{background:var(--gold-grad);color:var(--accent);box-shadow:var(--gold-glow)}
-.hero .cta .btn.xl:hover{background:var(--gold-grad);color:var(--accent);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
+.hero .cta .btn.xl{background:var(--gold-grad);color:var(--brand);box-shadow:var(--gold-glow)}
+.hero .cta .btn.xl:hover{background:var(--gold-grad);color:var(--brand);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
 @media (max-width:760px){.hero{padding:40px 6vw 36px}}
 
 /* sections */
@@ -201,20 +201,28 @@ section.alt{background:var(--panel)}
 @media (max-width:860px){.story{grid-template-columns:1fr;gap:28px;padding-left:28px}.story::before{left:7px;right:auto;top:8px;bottom:8px;width:3px;height:auto;background:linear-gradient(180deg,#FFE27A,#FFD12E,#F5B800)}.stop{padding-top:0}.stop .dot{left:-28px;top:4px}}
 
 /* cta band */
-.band{background:var(--accent);color:#FFFFFF;border-radius:20px;padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+.band-wrap{padding-bottom:72px}
+@media (max-width:640px){.band-wrap{padding-bottom:56px}}
+.band{background:var(--brand);color:#FFFFFF;border-radius:20px;padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
 .band h2{font-size:clamp(24px,3vw,32px);color:#FFFFFF}
 .band p{margin:8px 0 0;opacity:.85;font-size:16px}
-.band .btn{background:var(--gold-grad);color:var(--accent);box-shadow:var(--gold-glow)}
-.band .btn:hover{background:var(--gold-grad);color:var(--accent);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
+.band .btn{background:var(--gold-grad);color:var(--brand);box-shadow:var(--gold-glow)}
+.band .btn:hover{background:var(--gold-grad);color:var(--brand);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
 
 /* quotes */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px;margin-top:40px}
+.marquee{margin-top:40px;overflow:hidden;padding:4px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee .track{display:flex;align-items:stretch;gap:20px;width:max-content;animation:marq 70s linear infinite}
+.marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
+.marquee .quote{flex:0 0 min(340px,80vw)}
+@keyframes marq{to{transform:translateX(calc(-50% - 10px))}}
+@media (prefers-reduced-motion: reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}}
 .quote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px 24px;display:flex;flex-direction:column;gap:18px;position:relative}
 .quote::before{content:"“";position:absolute;top:8px;left:20px;font-size:64px;line-height:1;font-weight:800;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
 .quote blockquote{margin:0;font-size:17px;line-height:1.55;color:var(--ink);padding-top:14px}
-.quote figcaption{display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.quote figcaption{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+.quote figcaption .who{display:flex;flex-direction:column;gap:2px}
 .quote figcaption b{color:var(--ink);font-size:15px}
-.proof-note{margin:20px 0 0;font-size:14px;color:var(--red)}
+.quote .av{flex:0 0 auto;width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--tint);color:var(--brand);display:grid;place-items:center;font-weight:800;font-size:17px;box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--gold-dark)}
 
 /* included */
 .inc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:40px;margin-top:36px;align-items:start}
@@ -222,12 +230,12 @@ section.alt{background:var(--panel)}
 .checks li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
 .checks svg{flex:0 0 auto;width:24px;height:24px;stroke:var(--gold-dark);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
 .tools{margin:20px 0 0;font-size:15px;color:var(--muted);line-height:1.6}
-.pricebox{background:var(--accent);color:#FFFFFF;border-radius:18px;padding:32px;position:sticky;top:96px}
+.pricebox{background:var(--brand);color:#FFFFFF;border-radius:18px;padding:32px;position:sticky;top:96px}
 .pricebox .big{font-size:64px;font-weight:800;line-height:1;letter-spacing:-0.03em;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;filter:drop-shadow(0 0 8px rgba(255,201,46,.3))}
 .pricebox .big small{font-size:18px;font-weight:500;letter-spacing:0;margin-left:8px;opacity:.85;background:none;-webkit-background-clip:initial;background-clip:initial;color:#FFFFFF;filter:none}
 .pricebox p{margin:14px 0 24px;opacity:.85;font-size:16px}
-.pricebox .btn{width:100%;background:var(--gold-grad);color:var(--accent);box-shadow:var(--gold-glow)}
-.pricebox .btn:hover{background:var(--gold-grad);color:var(--accent);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
+.pricebox .btn{width:100%;background:var(--gold-grad);color:var(--brand);box-shadow:var(--gold-glow)}
+.pricebox .btn:hover{background:var(--gold-grad);color:var(--brand);filter:brightness(1.04);box-shadow:0 0 20px rgba(255,201,46,.5)}
 .pricebox .micro{color:#FFFFFF;opacity:.75;margin-top:12px;text-align:center}
 
 /* steps */
@@ -240,7 +248,7 @@ section.alt{background:var(--panel)}
 .step .btn{margin-top:16px;width:100%}
 
 /* faq */
-.faq{margin-top:28px;max-width:720px}
+.faq{margin-top:28px}
 details{border-bottom:1px solid var(--line)}
 summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;cursor:pointer;font-weight:700;font-size:18px}
 summary::-webkit-details-marker{display:none}
@@ -348,25 +356,47 @@ footer a{color:var(--ink)}
 <section aria-labelledby="h-proof" id="proof">
 <div class="wrap">
 <h2 id="h-proof">What business owners say</h2>
-<div class="quotes">
+<!-- Testimonials scroll automatically. Add or remove <figure> blocks freely; the script duplicates them for a seamless loop.
+     Photo: replace each <span class="av"> with <img class="av" src="customer-1.jpg" alt="" width="52" height="52"> -->
+<div class="marquee" aria-label="Customer testimonials">
+<div class="track">
 <figure class="quote">
 <blockquote>“We’d been paying for SEO for a year on faith. Two weeks of this and I could see that most of our real leads were coming from referrals and Google Maps. Changed where we spend.”</blockquote>
-<figcaption><b>[Name]</b><span>[Owner, Commercial cleaning company · Columbus, OH]</span></figcaption>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
 </figure>
 <figure class="quote">
 <blockquote>“I’m not technical. I gave them access on a Tuesday, had a test lead in my inbox with all the details on Wednesday. Haven’t touched it since.”</blockquote>
-<figcaption><b>[Name]</b><span>[President, Managed IT services · Tampa, FL]</span></figcaption>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
 </figure>
 <figure class="quote">
 <blockquote>“Now when a quote request comes in, my sales guy can see they’ve read the pricing page three times. He calls those first. Simple as that.”</blockquote>
-<figcaption><b>[Name]</b><span>[Owner, Machine shop · Grand Rapids, MI]</span></figcaption>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
+</figure>
+<figure class="quote">
+<blockquote>“[Real customer quote: what they couldn’t see before, and what changed after.]”</blockquote>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
+</figure>
+<figure class="quote">
+<blockquote>“[Real customer quote: how easy the setup was.]”</blockquote>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
+</figure>
+<figure class="quote">
+<blockquote>“[Real customer quote: a lead they closed because they knew the source or the pages read.]”</blockquote>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
+</figure>
+<figure class="quote">
+<blockquote>“[Real customer quote: a marketing channel they cut or doubled down on.]”</blockquote>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
+</figure>
+<figure class="quote">
+<blockquote>“[Real customer quote: value for the one-time price.]”</blockquote>
+<figcaption><span class="av" aria-hidden="true">?</span><span class="who"><b>[Name]</b><span>[Title, Company · City, ST]</span></span></figcaption>
 </figure>
 </div>
-<p class="proof-note">Placeholder quotes. Replace with real customers before publishing.</p>
-</div>
+</div></div>
 </section>
 
-<div class="wrap">
+<div class="wrap band-wrap">
 <div class="band">
 <div>
 <h2>Want to see it on your own site?</h2>
@@ -482,6 +512,14 @@ footer a{color:var(--ink)}
       Calendly.initBadgeWidget({ url: BOOKING_URL, text: "Book a 15-minute call", color: "#5E1A26", textColor: "#FFD12E", branding: true });
     }
   });
+
+  /* Testimonials: duplicate the cards once so the scroll loops seamlessly (skipped for reduced motion, where the row scrolls by hand). */
+  var track = document.querySelector(".marquee .track");
+  if(track && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)){
+    Array.prototype.slice.call(track.children).forEach(function(card){
+      var c = card.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c);
+    });
+  }
 
   /* Hero "After" card: replay the lead-reveal animation every 8 seconds (static if the visitor prefers reduced motion). */
   var after = document.getElementById("after");
