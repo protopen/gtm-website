@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://attriform.com/sitemap.xml
+Sitemap: https://www.attriform.com/sitemap.xml
