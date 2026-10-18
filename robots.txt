@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://attriform.com/sitemap.xml
