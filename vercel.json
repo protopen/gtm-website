@@ -40,8 +40,13 @@
   ],
   "redirects": [
     {
+      "source": "/main",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/v1",
-      "destination": "/main",
+      "destination": "/",
       "permanent": true
     }
   ]
