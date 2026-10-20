@@ -1,5 +1,7 @@
 # Landing page
 
+`index.html` is V2, written for US manufacturers that quote from a web RFQ form (machine shops, fabricators, molders, contract manufacturers, machinery makers). `v1.html` keeps the original general small-business version, live at `/v1` and marked noindex so it doesn't compete with the home page in search.
+
 `index.html` is the complete page in one file: HTML with inline styles, no build step and no JavaScript. Fonts load from Google Fonts (Bricolage Grotesque, IBM Plex Sans, IBM Plex Mono) with system fallbacks.
 
 ## Replace these placeholders
